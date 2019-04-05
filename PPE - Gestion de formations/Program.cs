@@ -12,11 +12,26 @@ namespace PPE___Gestion_de_formations
         /// Point d'entrée principal de l'application.
         /// </summary>
         [STAThread]
+
+        
+     
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            ConnexionForm form_de_connexion = new ConnexionForm();
+            form_de_connexion.ShowDialog();
+            if(form_de_connexion.DialogResult == DialogResult.OK)
+            {
+                form_de_connexion.Close();
+                if (ConnexionForm.leUser.Type == 1)
+                    Application.Run(new Form1());
+                else if (ConnexionForm.leUser.Type == 3)
+                    Application.Run(new FormAdmin());
+            }
+            
         }
     }
 }

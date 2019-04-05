@@ -12,6 +12,12 @@ namespace PPE___Gestion_de_formations
         public int ID { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
+        public string Adresse { get; set; }
+        public string Ville { get; set; }
+        public string CodePostal { get; set; }
+        public string Email { get; set; }
+        public string Tel { get; set; }
+
         public List<Session> LesSessionsChoisies { get; set; }
         public List<Session> LesSessionsInscrites { get; set; }
 
@@ -35,6 +41,11 @@ namespace PPE___Gestion_de_formations
         public string StrParticipant()
         {
             return Nom + " " + Prenom;
+        }
+
+        public string AdresseComplete()
+        {
+            return Adresse + " " + Ville + " " + CodePostal;
         }
     }
 }

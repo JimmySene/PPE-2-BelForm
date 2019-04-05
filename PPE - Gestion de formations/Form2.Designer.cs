@@ -43,7 +43,6 @@
             this.btn_annuler = new System.Windows.Forms.Button();
             this.dtp_datedebut = new System.Windows.Forms.DateTimePicker();
             this.dtp_datefin = new System.Windows.Forms.DateTimePicker();
-            this.lbl_niveau = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dg_inscrits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_postulants)).BeginInit();
             this.SuspendLayout();
@@ -185,21 +184,11 @@
             this.dtp_datefin.Size = new System.Drawing.Size(200, 20);
             this.dtp_datefin.TabIndex = 16;
             // 
-            // lbl_niveau
-            // 
-            this.lbl_niveau.AutoSize = true;
-            this.lbl_niveau.Location = new System.Drawing.Point(28, 52);
-            this.lbl_niveau.Name = "lbl_niveau";
-            this.lbl_niveau.Size = new System.Drawing.Size(47, 13);
-            this.lbl_niveau.TabIndex = 17;
-            this.lbl_niveau.Text = "Niveau :";
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lbl_niveau);
             this.Controls.Add(this.dtp_datefin);
             this.Controls.Add(this.dtp_datedebut);
             this.Controls.Add(this.btn_annuler);
@@ -242,6 +231,5 @@
         private System.Windows.Forms.Button btn_annuler;
         private System.Windows.Forms.DateTimePicker dtp_datedebut;
         private System.Windows.Forms.DateTimePicker dtp_datefin;
-        private System.Windows.Forms.Label lbl_niveau;
     }
 }

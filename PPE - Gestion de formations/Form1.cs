@@ -21,6 +21,9 @@ namespace PPE___Gestion_de_formations
         SessionManager sessionManager = new SessionManager();
         List<Session> sessions = new List<Session>();
 
+        LieuManager lieuManager = new LieuManager();
+
+
         public Form1()
         {
             InitializeComponent();
@@ -46,15 +49,21 @@ namespace PPE___Gestion_de_formations
             foreach(Session la_session in sessions)
             {
                 la_session.LaFormation = la_formation;
+                la_session.LeLieu = lieuManager.getLieu(la_session);
             }
            
             // On les affiche dans la datagrid
             dg_sessions.DataSource = sessions;
 
-            dg_sessions.Columns["Id"].HeaderText = "Numéro";
+            dg_sessions.Columns["Id"].Visible = false;
             dg_sessions.Columns["DateDebut"].HeaderText = "Début";
             dg_sessions.Columns["DateFin"].HeaderText = "Fin";
+            dg_sessions.Columns["MsgAnnulation"].Visible = false;
             dg_sessions.Columns["LaFormation"].Visible = false;
+            dg_sessions.Columns["LeLieu"].Visible = false;
+            dg_sessions.Columns["NomLieu"].HeaderText = "Lieu";
+            
+
             dg_sessions.AutoSize = true;
         }
 
@@ -65,6 +74,12 @@ namespace PPE___Gestion_de_formations
 
             Form2 fenetre_session = new Form2(la_session);
             fenetre_session.Show();
+        }
+
+        private void link_incident_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormInsererIncident formInsererIncident = new FormInsererIncident();
+            formInsererIncident.ShowDialog();
         }
     }
 }

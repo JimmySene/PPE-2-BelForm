@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PPE___Gestion_de_formations.ComboValue">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ComboValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.Form1" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAGAIIAAAASCAAAICAiAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.Form2" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEABIQAICAAgFAEAAiEAAICACIggAAAAAAAAAABAAA=</HashCode>
+      <FileName>Form2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.Formation">
+    <Position X="12.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAABAAACAAAAAAAAAACACAAAA=</HashCode>
+      <FileName>Formation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.FormationManager">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAAABA=</HashCode>
+      <FileName>FormationManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.Lieu">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAACAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Lieu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.LieuManager" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABA=</HashCode>
+      <FileName>LieuManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.Mysql" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAEgAAAAAAAAAAACAAAAAAAAAAQAQA=</HashCode>
+      <FileName>Mysql.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.Participant">
+    <Position X="10.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAECAAgAAAAAAAAEAYECAAAAAAACAAQAAAAAA=</HashCode>
+      <FileName>Participant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.ParticipantManager">
+    <Position X="13.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABE=</HashCode>
+      <FileName>ParticipantManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.Program" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.Session">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABBAAAAEgBAACACAAgAAAAAAgAAAAACAAAAAAAA=</HashCode>
+      <FileName>Session.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.SessionManager" Collapsed="true">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAAABA=</HashCode>
+      <FileName>SessionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.Properties.Resources" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.Properties.Settings" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PPE___Gestion_de_formations.Utilisateur">
+    <Position X="8.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECAAgAAAAAAAAAAAAAAAAAAAAQAQAAQAAAA=</HashCode>
+      <FileName>Utilisateur.cs</FileName>
+      <NewMemberFileName>utilisateur.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

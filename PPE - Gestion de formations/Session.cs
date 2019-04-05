@@ -11,25 +11,32 @@ namespace PPE___Gestion_de_formations
         public int ID { get; set; }
         public DateTime DateDebut { get; set; }
         public DateTime DateFin { get; set; }
-        public string Lieu { get; set; }
+        public string MsgAnnulation { get; set; }
+        public Lieu LeLieu { get; set; }
+        public string NomLieu
+        {
+            get
+            {
+                return LeLieu.Nom;
+            }
+        }
         public Formation LaFormation { get; set; }
         public List<Participant> LesPostulants { get; set; }
         public List<Participant> LesInscrits { get; set; }
 
         
-        public Session(int id, DateTime date_Debut, DateTime date_Fin, string lieu)
+        public Session(int id, DateTime date_Debut, DateTime date_Fin)
         {
             ID = id;
             DateDebut = date_Debut;
             DateFin = date_Fin;
-            Lieu = lieu;
         }
-        public Session(int id, DateTime dateDebut, DateTime dateFin, string lieu, Formation laFormation, List<Participant> lesPostulants, List<Participant> lesInscrits)
+        public Session(int id, DateTime dateDebut, DateTime dateFin, Lieu lieu, Formation laFormation, List<Participant> lesPostulants, List<Participant> lesInscrits)
         {
             ID = id;
             DateDebut = dateDebut;
             DateFin = dateFin;
-            Lieu = lieu;
+            LeLieu = lieu;
             LaFormation = laFormation;
             LesPostulants = lesPostulants;
             LesInscrits = lesInscrits;
@@ -37,7 +44,7 @@ namespace PPE___Gestion_de_formations
     
         public string StrSession()
         {
-            return ID + " " + DateDebut + " " + DateFin + " " + Lieu;
+            return ID + " " + DateDebut + " " + DateFin + " " + LeLieu.Nom;
         }
 
         public void SetLesDates(DateTime dateDebut, DateTime dateFin)

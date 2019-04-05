@@ -22,7 +22,6 @@ namespace PPE___Gestion_de_formations
             dtp_datedebut.Text = la_session.DateDebut.ToString();
             dtp_datefin.Text = la_session.DateFin.ToString();
             lbl_formation.Text += " " + la_session.LaFormation.Nom;
-            lbl_niveau.Text += " " + la_session.LaFormation.Niveau;
 
             les_inscrits = participantManager.getInscrits(la_session);
             les_postulants = participantManager.getPostulants(la_session);

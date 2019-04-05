@@ -30,7 +30,7 @@ namespace PPE___Gestion_de_formations
 
         public List<Session> getList(Formation la_formation)
         {
-            string StrQuery = "SELECT id, date_debut, date_fin, lieu FROM session WHERE id_formation=@la_formation";
+            string StrQuery = "SELECT id, date_debut, date_fin FROM session WHERE id_formation=@la_formation";
             var parameters = new DynamicParameters();
             parameters.Add("la_formation", la_formation.ID);
             DB.Open();

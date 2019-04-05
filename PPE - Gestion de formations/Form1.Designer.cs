@@ -32,6 +32,7 @@
             this.cb_formation = new System.Windows.Forms.ComboBox();
             this.dg_sessions = new System.Windows.Forms.DataGridView();
             this.lbl_sessions = new System.Windows.Forms.Label();
+            this.link_incident = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dg_sessions)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,11 +77,23 @@
             this.lbl_sessions.TabIndex = 3;
             this.lbl_sessions.Text = "Sessions :";
             // 
+            // link_incident
+            // 
+            this.link_incident.AutoSize = true;
+            this.link_incident.Location = new System.Drawing.Point(119, 304);
+            this.link_incident.Name = "link_incident";
+            this.link_incident.Size = new System.Drawing.Size(102, 13);
+            this.link_incident.TabIndex = 4;
+            this.link_incident.TabStop = true;
+            this.link_incident.Text = "Déclarer un incident";
+            this.link_incident.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_incident_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(445, 450);
+            this.Controls.Add(this.link_incident);
             this.Controls.Add(this.lbl_sessions);
             this.Controls.Add(this.dg_sessions);
             this.Controls.Add(this.cb_formation);
@@ -99,6 +112,7 @@
         private System.Windows.Forms.ComboBox cb_formation;
         private System.Windows.Forms.DataGridView dg_sessions;
         private System.Windows.Forms.Label lbl_sessions;
+        private System.Windows.Forms.LinkLabel link_incident;
     }
 }
 
