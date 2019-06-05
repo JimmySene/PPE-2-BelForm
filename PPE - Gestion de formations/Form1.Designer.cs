@@ -80,7 +80,7 @@
             // link_incident
             // 
             this.link_incident.AutoSize = true;
-            this.link_incident.Location = new System.Drawing.Point(119, 304);
+            this.link_incident.Location = new System.Drawing.Point(99, 384);
             this.link_incident.Name = "link_incident";
             this.link_incident.Size = new System.Drawing.Size(102, 13);
             this.link_incident.TabIndex = 4;

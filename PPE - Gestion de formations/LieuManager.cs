@@ -28,5 +28,15 @@ namespace PPE___Gestion_de_formations
 
             return leLieu;
         }
+
+        public List<Lieu> getList()
+        {
+            string StrQuery = "SELECT * FROM lieu";
+            DB.Open();
+            List<Lieu> lesLieux = DB.Query<Lieu>(StrQuery).ToList();
+            DB.Close();
+
+            return lesLieux;
+        }
     }
 }

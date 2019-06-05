@@ -129,7 +129,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 74);
+            this.label1.Location = new System.Drawing.Point(49, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 13);
             this.label1.TabIndex = 3;
@@ -137,14 +137,14 @@
             // 
             // tb_nom_formation_modif
             // 
-            this.tb_nom_formation_modif.Location = new System.Drawing.Point(31, 115);
+            this.tb_nom_formation_modif.Location = new System.Drawing.Point(52, 112);
             this.tb_nom_formation_modif.Name = "tb_nom_formation_modif";
             this.tb_nom_formation_modif.Size = new System.Drawing.Size(260, 20);
             this.tb_nom_formation_modif.TabIndex = 2;
             // 
             // btn_modifier_formation
             // 
-            this.btn_modifier_formation.Location = new System.Drawing.Point(122, 161);
+            this.btn_modifier_formation.Location = new System.Drawing.Point(143, 154);
             this.btn_modifier_formation.Name = "btn_modifier_formation";
             this.btn_modifier_formation.Size = new System.Drawing.Size(93, 23);
             this.btn_modifier_formation.TabIndex = 1;
@@ -155,7 +155,7 @@
             // cb_modifier_formation
             // 
             this.cb_modifier_formation.FormattingEnabled = true;
-            this.cb_modifier_formation.Location = new System.Drawing.Point(31, 33);
+            this.cb_modifier_formation.Location = new System.Drawing.Point(52, 34);
             this.cb_modifier_formation.Name = "cb_modifier_formation";
             this.cb_modifier_formation.Size = new System.Drawing.Size(260, 21);
             this.cb_modifier_formation.TabIndex = 0;

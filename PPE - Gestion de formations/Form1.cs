@@ -22,7 +22,7 @@ namespace PPE___Gestion_de_formations
         List<Session> sessions = new List<Session>();
 
         LieuManager lieuManager = new LieuManager();
-
+        ParticipantManager participantManager = new ParticipantManager();
 
         public Form1()
         {
@@ -50,6 +50,8 @@ namespace PPE___Gestion_de_formations
             {
                 la_session.LaFormation = la_formation;
                 la_session.LeLieu = lieuManager.getLieu(la_session);
+                la_session.LesPostulants = participantManager.getPostulants(la_session);
+                la_session.LesInscrits = participantManager.getInscrits(la_session);
             }
            
             // On les affiche dans la datagrid
@@ -62,24 +64,23 @@ namespace PPE___Gestion_de_formations
             dg_sessions.Columns["LaFormation"].Visible = false;
             dg_sessions.Columns["LeLieu"].Visible = false;
             dg_sessions.Columns["NomLieu"].HeaderText = "Lieu";
-            
+            dg_sessions.Columns["NbInscrits"].HeaderText = "Inscrits";
+
 
             dg_sessions.AutoSize = true;
         }
 
-        private void dg_sessions_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Session la_session = (Session)dg_sessions.CurrentRow.DataBoundItem;
-           
-
-            Form2 fenetre_session = new Form2(la_session);
-            fenetre_session.Show();
-        }
+      
 
         private void link_incident_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormInsererIncident formInsererIncident = new FormInsererIncident();
             formInsererIncident.ShowDialog();
+        }
+
+        private void dg_sessions_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -18,6 +18,9 @@ namespace PPE___Gestion_de_formations
         public string Email { get; set; }
         public string Tel { get; set; }
 
+        public string NomComplet { get; set; }
+        public string MotifRefus { get; set; }
+
         public List<Session> LesSessionsChoisies { get; set; }
         public List<Session> LesSessionsInscrites { get; set; }
 
@@ -30,6 +33,31 @@ namespace PPE___Gestion_de_formations
             LesSessionsInscrites = lesSessionsInscrites;
 
         }
+        public Participant(int id, string nom, string prenom, string adresse, string ville, string code_postal, string email, string mobile, string motif_refus)
+        {
+            ID = id;
+            Nom = nom;
+            Prenom = prenom;
+            Adresse = adresse;
+            Ville = ville;
+            CodePostal = code_postal;
+            Email = email;
+            Tel = mobile;
+            MotifRefus = motif_refus;
+            LesSessionsChoisies = new List<Session>();
+            LesSessionsInscrites = new List<Session>();
+            NomComplet = nom + " " + prenom;
+        }
+        public Participant(string nom, string prenom, string adresse, string ville, string code_postal, string email, string mobile)
+        {
+            Nom = nom;
+            Prenom = prenom;
+            Adresse = adresse;
+            Ville = ville;
+            CodePostal = code_postal;
+            Email = email;
+            Tel = mobile;
+        }
         public Participant(int id, string nom, string prenom)
         {
             ID = id;
@@ -37,6 +65,7 @@ namespace PPE___Gestion_de_formations
             Prenom = prenom;
             LesSessionsChoisies = new List<Session>();
             LesSessionsInscrites = new List<Session>();
+            NomComplet = nom + " " + prenom;
         }
         public string StrParticipant()
         {

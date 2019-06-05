@@ -33,5 +33,12 @@ namespace PPE___Gestion_de_formations
             FormGererFormations formGererFormations = new FormGererFormations();
             formGererFormations.ShowDialog();
         }
+
+        private void btn_gerer_sessions_Click(object sender, EventArgs e)
+        {
+            FormGererSession formGererSession = new FormGererSession();
+            formGererSession.ShowDialog();
+        }
+
     }
 }

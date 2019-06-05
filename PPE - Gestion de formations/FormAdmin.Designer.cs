@@ -31,7 +31,6 @@
             this.btn_incidents = new System.Windows.Forms.Button();
             this.btn_gerer_formations = new System.Windows.Forms.Button();
             this.btn_gerer_utilisateurs = new System.Windows.Forms.Button();
-            this.btn_gerer_candidatures = new System.Windows.Forms.Button();
             this.btn_gerer_sessions = new System.Windows.Forms.Button();
             this.link_deconnexion = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
@@ -58,21 +57,12 @@
             // 
             // btn_gerer_utilisateurs
             // 
-            this.btn_gerer_utilisateurs.Location = new System.Drawing.Point(74, 252);
+            this.btn_gerer_utilisateurs.Location = new System.Drawing.Point(74, 201);
             this.btn_gerer_utilisateurs.Name = "btn_gerer_utilisateurs";
             this.btn_gerer_utilisateurs.Size = new System.Drawing.Size(130, 23);
             this.btn_gerer_utilisateurs.TabIndex = 2;
             this.btn_gerer_utilisateurs.Text = "Gérer les utilisateurs";
             this.btn_gerer_utilisateurs.UseVisualStyleBackColor = true;
-            // 
-            // btn_gerer_candidatures
-            // 
-            this.btn_gerer_candidatures.Location = new System.Drawing.Point(74, 198);
-            this.btn_gerer_candidatures.Name = "btn_gerer_candidatures";
-            this.btn_gerer_candidatures.Size = new System.Drawing.Size(130, 23);
-            this.btn_gerer_candidatures.TabIndex = 3;
-            this.btn_gerer_candidatures.Text = "Gérer les candidatures";
-            this.btn_gerer_candidatures.UseVisualStyleBackColor = true;
             // 
             // btn_gerer_sessions
             // 
@@ -82,11 +72,12 @@
             this.btn_gerer_sessions.TabIndex = 4;
             this.btn_gerer_sessions.Text = "Gérer les sessions";
             this.btn_gerer_sessions.UseVisualStyleBackColor = true;
+            this.btn_gerer_sessions.Click += new System.EventHandler(this.btn_gerer_sessions_Click);
             // 
             // link_deconnexion
             // 
             this.link_deconnexion.AutoSize = true;
-            this.link_deconnexion.Location = new System.Drawing.Point(92, 312);
+            this.link_deconnexion.Location = new System.Drawing.Point(93, 263);
             this.link_deconnexion.Name = "link_deconnexion";
             this.link_deconnexion.Size = new System.Drawing.Size(83, 13);
             this.link_deconnexion.TabIndex = 5;
@@ -98,10 +89,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 356);
+            this.ClientSize = new System.Drawing.Size(288, 298);
             this.Controls.Add(this.link_deconnexion);
             this.Controls.Add(this.btn_gerer_sessions);
-            this.Controls.Add(this.btn_gerer_candidatures);
             this.Controls.Add(this.btn_gerer_utilisateurs);
             this.Controls.Add(this.btn_gerer_formations);
             this.Controls.Add(this.btn_incidents);
@@ -117,7 +107,6 @@
         private System.Windows.Forms.Button btn_incidents;
         private System.Windows.Forms.Button btn_gerer_formations;
         private System.Windows.Forms.Button btn_gerer_utilisateurs;
-        private System.Windows.Forms.Button btn_gerer_candidatures;
         private System.Windows.Forms.Button btn_gerer_sessions;
         private System.Windows.Forms.LinkLabel link_deconnexion;
     }
