@@ -52,16 +52,16 @@
             // dg_candidats
             // 
             this.dg_candidats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_candidats.Location = new System.Drawing.Point(62, 125);
+            this.dg_candidats.Location = new System.Drawing.Point(28, 122);
             this.dg_candidats.Name = "dg_candidats";
             this.dg_candidats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_candidats.Size = new System.Drawing.Size(270, 215);
+            this.dg_candidats.Size = new System.Drawing.Size(379, 215);
             this.dg_candidats.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 106);
+            this.label1.Location = new System.Drawing.Point(25, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 2;
@@ -70,16 +70,16 @@
             // dg_inscrits
             // 
             this.dg_inscrits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_inscrits.Location = new System.Drawing.Point(446, 125);
+            this.dg_inscrits.Location = new System.Drawing.Point(464, 122);
             this.dg_inscrits.Name = "dg_inscrits";
             this.dg_inscrits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_inscrits.Size = new System.Drawing.Size(270, 215);
+            this.dg_inscrits.Size = new System.Drawing.Size(379, 215);
             this.dg_inscrits.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(443, 106);
+            this.label2.Location = new System.Drawing.Point(461, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 4;
@@ -87,9 +87,9 @@
             // 
             // btn_accepter
             // 
-            this.btn_accepter.Location = new System.Drawing.Point(106, 364);
+            this.btn_accepter.Location = new System.Drawing.Point(93, 351);
             this.btn_accepter.Name = "btn_accepter";
-            this.btn_accepter.Size = new System.Drawing.Size(75, 23);
+            this.btn_accepter.Size = new System.Drawing.Size(95, 33);
             this.btn_accepter.TabIndex = 5;
             this.btn_accepter.Text = "Accepter";
             this.btn_accepter.UseVisualStyleBackColor = true;
@@ -97,9 +97,9 @@
             // 
             // btn_refuser
             // 
-            this.btn_refuser.Location = new System.Drawing.Point(208, 364);
+            this.btn_refuser.Location = new System.Drawing.Point(245, 351);
             this.btn_refuser.Name = "btn_refuser";
-            this.btn_refuser.Size = new System.Drawing.Size(75, 23);
+            this.btn_refuser.Size = new System.Drawing.Size(95, 33);
             this.btn_refuser.TabIndex = 6;
             this.btn_refuser.Text = "Refuser";
             this.btn_refuser.UseVisualStyleBackColor = true;
@@ -107,9 +107,9 @@
             // 
             // btn_retirer
             // 
-            this.btn_retirer.Location = new System.Drawing.Point(538, 364);
+            this.btn_retirer.Location = new System.Drawing.Point(607, 351);
             this.btn_retirer.Name = "btn_retirer";
-            this.btn_retirer.Size = new System.Drawing.Size(75, 23);
+            this.btn_retirer.Size = new System.Drawing.Size(95, 33);
             this.btn_retirer.TabIndex = 7;
             this.btn_retirer.Text = "Retirer";
             this.btn_retirer.UseVisualStyleBackColor = true;
@@ -118,9 +118,10 @@
             // lbl_nb_inscrits
             // 
             this.lbl_nb_inscrits.AutoSize = true;
-            this.lbl_nb_inscrits.Location = new System.Drawing.Point(443, 33);
+            this.lbl_nb_inscrits.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nb_inscrits.Location = new System.Drawing.Point(22, 33);
             this.lbl_nb_inscrits.Name = "lbl_nb_inscrits";
-            this.lbl_nb_inscrits.Size = new System.Drawing.Size(96, 13);
+            this.lbl_nb_inscrits.Size = new System.Drawing.Size(245, 31);
             this.lbl_nb_inscrits.TabIndex = 8;
             this.lbl_nb_inscrits.Text = "Nombre d\'inscrits : ";
             // 
@@ -128,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(875, 413);
             this.Controls.Add(this.lbl_nb_inscrits);
             this.Controls.Add(this.btn_retirer);
             this.Controls.Add(this.btn_refuser);

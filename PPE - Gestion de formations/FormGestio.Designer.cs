@@ -39,6 +39,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_sms = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btn_venues = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_sessions)).BeginInit();
@@ -86,6 +89,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_venues);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btn_sms);
             this.groupBox2.Controls.Add(this.dg_sessions);
             this.groupBox2.Controls.Add(this.cb_formations);
@@ -94,10 +99,10 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(475, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(412, 396);
+            this.groupBox2.Size = new System.Drawing.Size(412, 444);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Candidatures / SMS de confirmation / Feuille d\'emergement";
+            this.groupBox2.Text = "Candidatures / SMS de confirmation / Feuille d\'emargement";
             // 
             // dg_sessions
             // 
@@ -155,11 +160,42 @@
             this.btn_sms.UseVisualStyleBackColor = true;
             this.btn_sms.Click += new System.EventHandler(this.btn_sms_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(18, 384);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(171, 34);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Feuille d\'émargement";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 32F);
+            this.label4.Location = new System.Drawing.Point(44, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(349, 52);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Espace gestionnaire";
+            // 
+            // btn_venues
+            // 
+            this.btn_venues.Location = new System.Drawing.Point(208, 384);
+            this.btn_venues.Name = "btn_venues";
+            this.btn_venues.Size = new System.Drawing.Size(186, 34);
+            this.btn_venues.TabIndex = 13;
+            this.btn_venues.Text = "Enregistrer les venues";
+            this.btn_venues.UseVisualStyleBackColor = true;
+            this.btn_venues.Click += new System.EventHandler(this.btn_venues_Click);
+            // 
             // FormGestio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 433);
+            this.ClientSize = new System.Drawing.Size(913, 468);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormGestio";
@@ -170,6 +206,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_sessions)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -186,5 +223,8 @@
         private System.Windows.Forms.ComboBox cb_formations;
         private System.Windows.Forms.DataGridView dg_sessions;
         private System.Windows.Forms.Button btn_sms;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_venues;
     }
 }

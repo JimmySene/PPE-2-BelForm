@@ -1,8 +1,11 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -100,6 +103,71 @@ namespace PPE___Gestion_de_formations
         {
             FormEnvoieSMS formEnvoieSMS = new FormEnvoieSMS();
             formEnvoieSMS.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (dg_sessions.SelectedRows.Count == 1)
+            {
+                Session la_session = null;
+                List<Participant> lesInscrits = new List<Participant>();
+                foreach (DataGridViewRow ligne in dg_sessions.SelectedRows)
+                {
+                    la_session = (Session)ligne.DataBoundItem;
+                    lesInscrits = participantManager.getInscrits(la_session);
+                }
+                using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF file|*.pdf", ValidateNames = true })
+                {
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.A4.Rotate());
+                        try
+                        {
+                            PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+                            doc.Open();
+                            doc.Add(new iTextSharp.text.Paragraph("FEUILLE D'EMARGEMENT DE LA SESSION " + la_session.LaFormation.Nom + " " + la_session.StrSession() + "\n\n Inscrits : \n\n"));
+                            List list = new List();
+                            foreach (Participant participant in lesInscrits)
+                            {
+                                list.Add(participant.NomComplet);
+                            }
+                            doc.Add(list);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                        finally
+                        {
+                            doc.Close();
+                            MessageBox.Show("La feuille d'émargement a été créée !");
+                        }
+                    }
+                }
+      
+            }
+            else
+                MessageBox.Show("Selectionnez une (et une seule) session !");
+        }
+
+        private void btn_venues_Click(object sender, EventArgs e)
+        {
+            if (dg_sessions.SelectedRows.Count == 1)
+            {
+                Session la_session = null;
+                List<Participant> lesInscrits = new List<Participant>();
+                foreach (DataGridViewRow ligne in dg_sessions.SelectedRows)
+                {
+                    la_session = (Session)ligne.DataBoundItem;
+                    lesInscrits = participantManager.getInscrits(la_session);
+                }
+
+                FormCheckVenues formCheckVenues = new FormCheckVenues(la_session);
+                formCheckVenues.ShowDialog();
+            }
+            else
+                MessageBox.Show("Selectionnez une (et une seule) session !");
         }
     }
 }

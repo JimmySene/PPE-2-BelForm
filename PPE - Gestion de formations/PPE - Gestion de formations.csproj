@@ -127,6 +127,12 @@
     <Compile Include="FormCandidaterParticipant.Designer.cs">
       <DependentUpon>FormCandidaterParticipant.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCheckVenues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCheckVenues.Designer.cs">
+      <DependentUpon>FormCheckVenues.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEnvoieSMS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCandidaterParticipant.resx">
       <DependentUpon>FormCandidaterParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCheckVenues.resx">
+      <DependentUpon>FormCheckVenues.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEnvoieSMS.resx">
       <DependentUpon>FormEnvoieSMS.cs</DependentUpon>

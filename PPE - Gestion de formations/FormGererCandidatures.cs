@@ -41,10 +41,12 @@ namespace PPE___Gestion_de_formations
             dg_candidats.Columns["Id"].Visible = false;
             dg_candidats.Columns["NomComplet"].Visible = false;
             dg_candidats.Columns["MotifRefus"].HeaderText = "Motif du refus";
+            dg_candidats.Columns["Signature"].Visible = false;
 
             dg_inscrits.Columns["Id"].Visible = false;
             dg_inscrits.Columns["NomComplet"].Visible = false;
             dg_inscrits.Columns["MotifRefus"].Visible = false;
+            dg_inscrits.Columns["Signature"].Visible = false;
 
         }
 

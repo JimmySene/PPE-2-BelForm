@@ -50,7 +50,7 @@
             this.cb_formation.FormattingEnabled = true;
             this.cb_formation.Location = new System.Drawing.Point(16, 51);
             this.cb_formation.Name = "cb_formation";
-            this.cb_formation.Size = new System.Drawing.Size(321, 21);
+            this.cb_formation.Size = new System.Drawing.Size(402, 21);
             this.cb_formation.TabIndex = 1;
             this.cb_formation.SelectedIndexChanged += new System.EventHandler(this.cb_formation_SelectedIndexChanged);
             // 
@@ -64,7 +64,7 @@
             this.dg_sessions.Name = "dg_sessions";
             this.dg_sessions.ReadOnly = true;
             this.dg_sessions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_sessions.Size = new System.Drawing.Size(321, 150);
+            this.dg_sessions.Size = new System.Drawing.Size(402, 150);
             this.dg_sessions.TabIndex = 2;
             this.dg_sessions.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_sessions_CellContentClick);
             // 
@@ -80,7 +80,7 @@
             // link_incident
             // 
             this.link_incident.AutoSize = true;
-            this.link_incident.Location = new System.Drawing.Point(99, 384);
+            this.link_incident.Location = new System.Drawing.Point(16, 308);
             this.link_incident.Name = "link_incident";
             this.link_incident.Size = new System.Drawing.Size(102, 13);
             this.link_incident.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 450);
+            this.ClientSize = new System.Drawing.Size(444, 361);
             this.Controls.Add(this.link_incident);
             this.Controls.Add(this.lbl_sessions);
             this.Controls.Add(this.dg_sessions);

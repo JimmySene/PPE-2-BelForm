@@ -25,7 +25,7 @@ namespace PPE___Gestion_de_formations
 
         public List<Participant> getInscrits(Session la_session)
         {
-            string StrQuery = "SELECT id, nom, prenom, adresse, ville, code_postal, email, mobile, motif_refus FROM participant, inscrit_session WHERE id = id_participant AND id_session = @session_id AND validation = 1";
+            string StrQuery = "SELECT id, nom, prenom, adresse, ville, code_postal, email, mobile, motif_refus, signature FROM participant, inscrit_session WHERE id = id_participant AND id_session = @session_id AND validation = 1";
             DynamicParameters parameters = new DynamicParameters();
             parameters.Add("session_id", la_session.ID);
             List<Participant> les_inscrits = DB.Query<Participant>(StrQuery, parameters).ToList();
@@ -35,7 +35,7 @@ namespace PPE___Gestion_de_formations
 
         public List<Participant> getPostulants(Session la_session)
         {
-            string StrQuery = "SELECT id, nom, prenom, adresse, ville, code_postal, email, mobile, motif_refus FROM participant, inscrit_session WHERE id = id_participant AND id_session = @session_id AND (validation = 0 OR validation = 2)";
+            string StrQuery = "SELECT id, nom, prenom, adresse, ville, code_postal, email, mobile, motif_refus, signature FROM participant, inscrit_session WHERE id = id_participant AND id_session = @session_id AND (validation = 0 OR validation = 2)";
             DynamicParameters parameters = new DynamicParameters();
             parameters.Add("session_id", la_session.ID);
             List<Participant> les_postulants = DB.Query<Participant>(StrQuery, parameters).ToList();
@@ -135,6 +135,21 @@ namespace PPE___Gestion_de_formations
             DB.Open();
             DB.Query(StrQuery, parameters);
             DB.Close();
+        }
+
+        public void signer(List<Participant> lesInscrits, Session laSession)
+        {
+           foreach(Participant le_participant in lesInscrits)
+            {
+                string StrQuery = "UPDATE inscrit_session SET signature = @signature WHERE id_participant = @idparticipant AND id_session = @idsession";
+                DynamicParameters parameters = new DynamicParameters();
+                parameters.Add("idparticipant", le_participant.ID);
+                parameters.Add("idsession", laSession.ID);
+                parameters.Add("signature", le_participant.Signature);
+                DB.Open();
+                DB.Query(StrQuery, parameters);
+                DB.Close();
+            }
         }
 
     }
