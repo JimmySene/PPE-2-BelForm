@@ -95,5 +95,11 @@ namespace PPE___Gestion_de_formations
 
             
         }
+
+        private void btn_sms_Click(object sender, EventArgs e)
+        {
+            FormEnvoieSMS formEnvoieSMS = new FormEnvoieSMS();
+            formEnvoieSMS.ShowDialog();
+        }
     }
 }

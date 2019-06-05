@@ -33,11 +33,12 @@
             this.lb_formations = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_candidater = new System.Windows.Forms.Button();
-            this.cb_formations = new System.Windows.Forms.ComboBox();
             this.dg_sessions = new System.Windows.Forms.DataGridView();
+            this.cb_formations = new System.Windows.Forms.ComboBox();
+            this.btn_candidater = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_sms = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_sessions)).BeginInit();
@@ -85,6 +86,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_sms);
             this.groupBox2.Controls.Add(this.dg_sessions);
             this.groupBox2.Controls.Add(this.cb_formations);
             this.groupBox2.Controls.Add(this.btn_candidater);
@@ -95,35 +97,16 @@
             this.groupBox2.Size = new System.Drawing.Size(412, 396);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Inscrire un participant existant à une ou plusieurs session(s)";
+            this.groupBox2.Text = "Candidatures / SMS de confirmation / Feuille d\'emergement";
             // 
-            // label2
+            // dg_sessions
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Formation : ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Sessions : ";
-            // 
-            // btn_candidater
-            // 
-            this.btn_candidater.Location = new System.Drawing.Point(114, 329);
-            this.btn_candidater.Name = "btn_candidater";
-            this.btn_candidater.Size = new System.Drawing.Size(194, 34);
-            this.btn_candidater.TabIndex = 8;
-            this.btn_candidater.Text = "Faire candidater un participant";
-            this.btn_candidater.UseVisualStyleBackColor = true;
-            this.btn_candidater.Click += new System.EventHandler(this.button1_Click);
+            this.dg_sessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_sessions.Location = new System.Drawing.Point(61, 142);
+            this.dg_sessions.Name = "dg_sessions";
+            this.dg_sessions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_sessions.Size = new System.Drawing.Size(307, 150);
+            this.dg_sessions.TabIndex = 10;
             // 
             // cb_formations
             // 
@@ -134,14 +117,43 @@
             this.cb_formations.TabIndex = 9;
             this.cb_formations.SelectedIndexChanged += new System.EventHandler(this.cb_formations_SelectedIndexChanged);
             // 
-            // dg_sessions
+            // btn_candidater
             // 
-            this.dg_sessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_sessions.Location = new System.Drawing.Point(61, 142);
-            this.dg_sessions.Name = "dg_sessions";
-            this.dg_sessions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_sessions.Size = new System.Drawing.Size(307, 150);
-            this.dg_sessions.TabIndex = 10;
+            this.btn_candidater.Location = new System.Drawing.Point(18, 325);
+            this.btn_candidater.Name = "btn_candidater";
+            this.btn_candidater.Size = new System.Drawing.Size(171, 34);
+            this.btn_candidater.TabIndex = 8;
+            this.btn_candidater.Text = "Faire candidater un participant";
+            this.btn_candidater.UseVisualStyleBackColor = true;
+            this.btn_candidater.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(58, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Sessions : ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(58, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Formation : ";
+            // 
+            // btn_sms
+            // 
+            this.btn_sms.Location = new System.Drawing.Point(208, 325);
+            this.btn_sms.Name = "btn_sms";
+            this.btn_sms.Size = new System.Drawing.Size(186, 34);
+            this.btn_sms.TabIndex = 11;
+            this.btn_sms.Text = "Envoyer SMS de confirmation";
+            this.btn_sms.UseVisualStyleBackColor = true;
+            this.btn_sms.Click += new System.EventHandler(this.btn_sms_Click);
             // 
             // FormGestio
             // 
@@ -173,5 +185,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cb_formations;
         private System.Windows.Forms.DataGridView dg_sessions;
+        private System.Windows.Forms.Button btn_sms;
     }
 }
