@@ -39,9 +39,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 13);
+            this.label1.Size = new System.Drawing.Size(113, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Inscrits venus ou non à la formation :";
+            this.label1.Text = "Signature des inscrits :";
             // 
             // btn_signature
             // 
@@ -70,7 +70,7 @@
             this.Controls.Add(this.btn_signature);
             this.Controls.Add(this.label1);
             this.Name = "FormCheckVenues";
-            this.Text = "Vérifier venues";
+            this.Text = "Confirmation des présences";
             ((System.ComponentModel.ISupportInitialize)(this.dg_signature)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

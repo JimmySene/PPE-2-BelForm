@@ -21,19 +21,8 @@ namespace PPE___Gestion_de_formations
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            ConnexionForm form_de_connexion = new ConnexionForm();
-            form_de_connexion.ShowDialog();
-            if(form_de_connexion.DialogResult == DialogResult.OK)
-            {
-                form_de_connexion.Close();
-                if (ConnexionForm.leUser.Type == 1)
-                    Application.Run(new Form1());
-                else if (ConnexionForm.leUser.Type == 2)
-                    Application.Run(new FormGestio());
-                else if (ConnexionForm.leUser.Type == 3)
-                    Application.Run(new FormAdmin());
-            }
-            
+            Application.Run(new ConnexionForm());
+             
         }
     }
 }

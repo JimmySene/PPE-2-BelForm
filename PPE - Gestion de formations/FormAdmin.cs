@@ -12,9 +12,11 @@ namespace PPE___Gestion_de_formations
 {
     public partial class FormAdmin : Form
     {
-        public FormAdmin()
+        ConnexionForm leFormDeConnexion = null;
+        public FormAdmin(ConnexionForm connexionForm)
         {
             InitializeComponent();
+            leFormDeConnexion = connexionForm;
         }
 
         private void btn_incidents_Click(object sender, EventArgs e)
@@ -25,7 +27,8 @@ namespace PPE___Gestion_de_formations
 
         private void link_deconnexion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            leFormDeConnexion.Show();
+            this.Close();
         }
 
         private void btn_gerer_formations_Click(object sender, EventArgs e)

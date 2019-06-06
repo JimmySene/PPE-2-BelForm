@@ -31,10 +31,10 @@ namespace PPE___Gestion_de_formations
 
         }
 
-        private void raffraichir_dg() // Raffraichit la DataGridView des sessions de la formation selectionnée
+        private void raffraichir_dg() // Raffraichit les DataGridViews
         {
 
-            // On les affiche dans la datagrid
+            
             dg_candidats.DataSource = participantManager.getPostulants(LaSession);
             dg_inscrits.DataSource = participantManager.getInscrits(LaSession);
 
@@ -58,7 +58,7 @@ namespace PPE___Gestion_de_formations
                 participantManager.desinscrire(lInscrit, LaSession);
 
                 raffraichir_dg();
-                lbl_nb_inscrits.Text = "Nombre d'inscrits : " + LaSession.NbInscrits;
+                lbl_nb_inscrits.Text = "Nombre d'inscrits : " + dg_inscrits.Rows.Count + " / " + LaSession.LeLieu.NbPlaces;
             }
         }
 
@@ -66,27 +66,33 @@ namespace PPE___Gestion_de_formations
         {
             if (dg_candidats.CurrentRow != null)
             {
-                Participant leCandidat = (Participant)dg_candidats.CurrentRow.DataBoundItem;
-                participantManager.inscrire(leCandidat, LaSession);
+                if (dg_inscrits.Rows.Count < LaSession.LeLieu.NbPlaces) // Si il y a assez de place, alors on autorise l'inscription et on créé la convocation
+                {
+                    Participant leCandidat = (Participant)dg_candidats.CurrentRow.DataBoundItem;
+                    participantManager.inscrire(leCandidat, LaSession);
 
-                raffraichir_dg();
-                lbl_nb_inscrits.Text = "Nombre d'inscrits : " + LaSession.NbInscrits;
+                    raffraichir_dg();
+                    lbl_nb_inscrits.Text = "Nombre d'inscrits : " + dg_inscrits.Rows.Count + " / " + LaSession.LeLieu.NbPlaces;
 
-                string headerHtml = "<html>" +
-                    "<head>" +
-                    "<title>Convocation</title>" +
-                    "<style>p{font-size:25px}</style>" +
-                    "</head>" +
-                    "<body>" +
-                    "<p>";
-                string contentHtml = leCandidat.NomComplet + " est convié à se rendre à la session de formation \""+LaSession.LaFormation.Nom+"\" se déroulant " + LaSession.StrSession();
-                string footerHtml = "</p></body></html>";
-                string documentHtml = headerHtml + contentHtml + footerHtml;
+                    string headerHtml = "<html>" +
+                        "<head>" +
+                        "<title>Convocation</title>" +
+                        "<style>p{font-size:25px}</style>" +
+                        "</head>" +
+                        "<body>" +
+                        "<p>";
+                    string contentHtml = leCandidat.NomComplet + " est convié à se rendre à la session de formation \"" + LaSession.LaFormation.Nom + "\" se déroulant " + LaSession.StrSession();
+                    string footerHtml = "</p></body></html>";
+                    string documentHtml = headerHtml + contentHtml + footerHtml;
 
-                StreamWriter convocation = new StreamWriter(@"C:\Users\Jimmy\Documents\Dev\C#\PPE - Gestion de formations\PPE - Gestion de formations\Convocations\" + leCandidat.Nom+".html");
-                convocation.Write(documentHtml);
-                MessageBox.Show("Une convocation a été éditée !", "ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                convocation.Close();
+                    StreamWriter convocation = new StreamWriter(@"C:\Users\Jimmy\Documents\Dev\C#\PPE - Gestion de formations\PPE - Gestion de formations\Convocations\" + leCandidat.Nom + ".html");
+                    convocation.Write(documentHtml);
+                    MessageBox.Show("Une convocation a été éditée !", "ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    convocation.Close();
+                }
+                else
+                    MessageBox.Show("Il n'y a pas assez de place !");
+                
             }
         }
 

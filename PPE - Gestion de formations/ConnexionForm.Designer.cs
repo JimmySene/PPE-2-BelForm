@@ -33,7 +33,6 @@
             this.tb_login = new System.Windows.Forms.TextBox();
             this.tb_mdp = new System.Windows.Forms.TextBox();
             this.btn_connexion = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lbl_login
@@ -65,36 +64,26 @@
             // 
             this.tb_mdp.Location = new System.Drawing.Point(122, 57);
             this.tb_mdp.Name = "tb_mdp";
+            this.tb_mdp.PasswordChar = '*';
             this.tb_mdp.Size = new System.Drawing.Size(100, 20);
             this.tb_mdp.TabIndex = 3;
             // 
             // btn_connexion
             // 
-            this.btn_connexion.Location = new System.Drawing.Point(76, 96);
+            this.btn_connexion.Location = new System.Drawing.Point(67, 96);
             this.btn_connexion.Name = "btn_connexion";
-            this.btn_connexion.Size = new System.Drawing.Size(108, 23);
+            this.btn_connexion.Size = new System.Drawing.Size(117, 35);
             this.btn_connexion.TabIndex = 4;
             this.btn_connexion.Text = "Se connecter";
             this.btn_connexion.UseVisualStyleBackColor = true;
             this.btn_connexion.Click += new System.EventHandler(this.btn_connexion_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(74, 137);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(110, 13);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Mot de passe perdu ?";
             // 
             // ConnexionForm
             // 
             this.AcceptButton = this.btn_connexion;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 168);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(268, 153);
             this.Controls.Add(this.btn_connexion);
             this.Controls.Add(this.tb_mdp);
             this.Controls.Add(this.tb_login);
@@ -114,6 +103,5 @@
         private System.Windows.Forms.TextBox tb_login;
         private System.Windows.Forms.TextBox tb_mdp;
         private System.Windows.Forms.Button btn_connexion;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -24,9 +24,13 @@ namespace PPE___Gestion_de_formations
         LieuManager lieuManager = new LieuManager();
         ParticipantManager participantManager = new ParticipantManager();
 
-        public Form1()
+        ConnexionForm leFormDeConnexion = null;
+
+        public Form1(ConnexionForm connexionForm)
         {
             InitializeComponent();
+
+            leFormDeConnexion = connexionForm;
 
             // On récupère les formations
             formations = formationManager.getList();
@@ -81,6 +85,12 @@ namespace PPE___Gestion_de_formations
         private void dg_sessions_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void link_deconnexion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            leFormDeConnexion.Show();
+            this.Close();
         }
     }
 }

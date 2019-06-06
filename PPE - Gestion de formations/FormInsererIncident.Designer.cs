@@ -47,7 +47,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 96);
+            this.label2.Location = new System.Drawing.Point(30, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 1;
@@ -57,22 +57,22 @@
             // 
             this.tb_lib_incident.Location = new System.Drawing.Point(82, 35);
             this.tb_lib_incident.Name = "tb_lib_incident";
-            this.tb_lib_incident.Size = new System.Drawing.Size(203, 20);
+            this.tb_lib_incident.Size = new System.Drawing.Size(233, 20);
             this.tb_lib_incident.TabIndex = 2;
             // 
             // rtb_message_incident
             // 
-            this.rtb_message_incident.Location = new System.Drawing.Point(33, 131);
+            this.rtb_message_incident.Location = new System.Drawing.Point(33, 111);
             this.rtb_message_incident.Name = "rtb_message_incident";
-            this.rtb_message_incident.Size = new System.Drawing.Size(252, 148);
+            this.rtb_message_incident.Size = new System.Drawing.Size(282, 161);
             this.rtb_message_incident.TabIndex = 3;
             this.rtb_message_incident.Text = "";
             // 
             // btn_saisir_incident
             // 
-            this.btn_saisir_incident.Location = new System.Drawing.Point(116, 314);
+            this.btn_saisir_incident.Location = new System.Drawing.Point(105, 294);
             this.btn_saisir_incident.Name = "btn_saisir_incident";
-            this.btn_saisir_incident.Size = new System.Drawing.Size(75, 23);
+            this.btn_saisir_incident.Size = new System.Drawing.Size(112, 34);
             this.btn_saisir_incident.TabIndex = 4;
             this.btn_saisir_incident.Text = "Envoyer";
             this.btn_saisir_incident.UseVisualStyleBackColor = true;
@@ -82,7 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 450);
+            this.ClientSize = new System.Drawing.Size(350, 349);
             this.Controls.Add(this.btn_saisir_incident);
             this.Controls.Add(this.rtb_message_incident);
             this.Controls.Add(this.tb_lib_incident);

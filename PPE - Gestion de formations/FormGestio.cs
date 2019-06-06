@@ -26,9 +26,12 @@ namespace PPE___Gestion_de_formations
         LieuManager lieuManager = new LieuManager();
         ParticipantManager participantManager = new ParticipantManager();
 
-        public FormGestio()
+        ConnexionForm leFormDeConnexion = null;
+
+        public FormGestio(ConnexionForm connexionForm)
         {
             InitializeComponent();
+            leFormDeConnexion = connexionForm;
             lesFormations = formationManager.getList();
             lesFormations2 = formationManager.getList();
 
@@ -168,6 +171,12 @@ namespace PPE___Gestion_de_formations
             }
             else
                 MessageBox.Show("Selectionnez une (et une seule) session !");
+        }
+
+        private void link_deconnexion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            leFormDeConnexion.Show();
+            this.Close();
         }
     }
 }

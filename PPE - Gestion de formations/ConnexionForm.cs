@@ -25,7 +25,14 @@ namespace PPE___Gestion_de_formations
             leUser = utilisateurManager.Connexion(tb_login.Text, tb_mdp.Text);
             if(leUser != null)
             {
-                this.DialogResult = DialogResult.OK;
+                
+                if (leUser.Type == 1)
+                    new Form1(this).Show();
+                else if (leUser.Type == 2)
+                    new FormGestio(this).Show();
+                else if (leUser.Type == 3)
+                   new FormAdmin(this).Show();
+                this.Hide();
             }
                           
         }
