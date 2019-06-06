@@ -132,7 +132,7 @@ namespace PPE___Gestion_de_formations
                             List list = new List();
                             foreach (Participant participant in lesInscrits)
                             {
-                                list.Add(participant.NomComplet);
+                                list.Add(participant.StrParticipant());
                             }
                             doc.Add(list);
                         }

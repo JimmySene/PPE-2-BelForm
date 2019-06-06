@@ -17,7 +17,7 @@ namespace PPE___Gestion_de_formations
             DB = new MySqlConnection(StrConnection);
         }
 
-        public Utilisateur Connexion(string login, string motDePasse)
+        public Utilisateur Connexion(string login, string motDePasse) // Authentifie l'utilisateur et le retourne
         {
             var hash = SHA.GenerateSHA256String(motDePasse);
             string StrQuery = "SELECT * FROM utilisateur WHERE login = @login AND mot_de_passe = @mdp";

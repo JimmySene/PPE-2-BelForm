@@ -17,7 +17,7 @@ namespace PPE___Gestion_de_formations
             DB = new MySqlConnection(StrConnection);
         }
 
-        public Lieu getLieu(Session laSession)
+        public Lieu getLieu(Session laSession) // Obtient et retourne le lieu de la session
         {
             string StrQuery = "SELECT * FROM lieu WHERE id IN (SELECT id_lieu FROM session WHERE id = @id_session)";
             DynamicParameters parameters = new DynamicParameters();
@@ -29,7 +29,7 @@ namespace PPE___Gestion_de_formations
             return leLieu;
         }
 
-        public List<Lieu> getList()
+        public List<Lieu> getList() // Obtient et retourne l'ensemble des lieux
         {
             string StrQuery = "SELECT * FROM lieu";
             DB.Open();

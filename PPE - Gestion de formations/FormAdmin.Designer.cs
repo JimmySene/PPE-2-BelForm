@@ -28,26 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_incidents = new System.Windows.Forms.Button();
             this.btn_gerer_formations = new System.Windows.Forms.Button();
             this.btn_gerer_sessions = new System.Windows.Forms.Button();
             this.link_deconnexion = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btn_incidents
-            // 
-            this.btn_incidents.Location = new System.Drawing.Point(74, 85);
-            this.btn_incidents.Name = "btn_incidents";
-            this.btn_incidents.Size = new System.Drawing.Size(130, 23);
-            this.btn_incidents.TabIndex = 0;
-            this.btn_incidents.Text = "Voir les incidents";
-            this.btn_incidents.UseVisualStyleBackColor = true;
-            this.btn_incidents.Click += new System.EventHandler(this.btn_incidents_Click);
-            // 
             // btn_gerer_formations
             // 
-            this.btn_gerer_formations.Location = new System.Drawing.Point(46, 125);
+            this.btn_gerer_formations.Location = new System.Drawing.Point(46, 92);
             this.btn_gerer_formations.Name = "btn_gerer_formations";
             this.btn_gerer_formations.Size = new System.Drawing.Size(187, 57);
             this.btn_gerer_formations.TabIndex = 1;
@@ -57,7 +46,7 @@
             // 
             // btn_gerer_sessions
             // 
-            this.btn_gerer_sessions.Location = new System.Drawing.Point(46, 200);
+            this.btn_gerer_sessions.Location = new System.Drawing.Point(46, 175);
             this.btn_gerer_sessions.Name = "btn_gerer_sessions";
             this.btn_gerer_sessions.Size = new System.Drawing.Size(187, 57);
             this.btn_gerer_sessions.TabIndex = 4;
@@ -68,7 +57,7 @@
             // link_deconnexion
             // 
             this.link_deconnexion.AutoSize = true;
-            this.link_deconnexion.Location = new System.Drawing.Point(98, 273);
+            this.link_deconnexion.Location = new System.Drawing.Point(97, 258);
             this.link_deconnexion.Name = "link_deconnexion";
             this.link_deconnexion.Size = new System.Drawing.Size(83, 13);
             this.link_deconnexion.TabIndex = 5;
@@ -90,12 +79,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 306);
+            this.ClientSize = new System.Drawing.Size(288, 291);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.link_deconnexion);
             this.Controls.Add(this.btn_gerer_sessions);
             this.Controls.Add(this.btn_gerer_formations);
-            this.Controls.Add(this.btn_incidents);
             this.Name = "FormAdmin";
             this.Text = "Panneau d\'administration";
             this.ResumeLayout(false);
@@ -104,8 +92,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_incidents;
         private System.Windows.Forms.Button btn_gerer_formations;
         private System.Windows.Forms.Button btn_gerer_sessions;
         private System.Windows.Forms.LinkLabel link_deconnexion;

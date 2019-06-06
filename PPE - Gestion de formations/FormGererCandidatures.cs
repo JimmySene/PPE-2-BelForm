@@ -39,14 +39,14 @@ namespace PPE___Gestion_de_formations
             dg_inscrits.DataSource = participantManager.getInscrits(LaSession);
 
             dg_candidats.Columns["Id"].Visible = false;
-            dg_candidats.Columns["NomComplet"].Visible = false;
             dg_candidats.Columns["MotifRefus"].HeaderText = "Motif du refus";
             dg_candidats.Columns["Signature"].Visible = false;
+            dg_candidats.Columns["NomComplet"].Visible = false;
 
             dg_inscrits.Columns["Id"].Visible = false;
-            dg_inscrits.Columns["NomComplet"].Visible = false;
             dg_inscrits.Columns["MotifRefus"].Visible = false;
             dg_inscrits.Columns["Signature"].Visible = false;
+            dg_inscrits.Columns["NomComplet"].Visible = false;
 
         }
 
@@ -81,7 +81,7 @@ namespace PPE___Gestion_de_formations
                         "</head>" +
                         "<body>" +
                         "<p>";
-                    string contentHtml = leCandidat.NomComplet + " est convié à se rendre à la session de formation \"" + LaSession.LaFormation.Nom + "\" se déroulant " + LaSession.StrSession();
+                    string contentHtml = leCandidat.StrParticipant() + " est convié à se rendre à la session de formation \"" + LaSession.LaFormation.Nom + "\" se déroulant " + LaSession.StrSession();
                     string footerHtml = "</p></body></html>";
                     string documentHtml = headerHtml + contentHtml + footerHtml;
 

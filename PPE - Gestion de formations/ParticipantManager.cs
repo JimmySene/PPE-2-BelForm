@@ -17,13 +17,13 @@ namespace PPE___Gestion_de_formations
             DB = new MySqlConnection(StrConnection);
         }
 
-        public List<Participant> getList()
+        public List<Participant> getList() // Obtient et retourne tous les participants
         {
             string StrQuery = "SELECT id, nom, prenom FROM participant";
             return DB.Query<Participant>(StrQuery).ToList();
         }
 
-        public List<Participant> getInscrits(Session la_session)
+        public List<Participant> getInscrits(Session la_session) // Obtient et retourne tous les inscrits à la session
         {
             string StrQuery = "SELECT id, nom, prenom, adresse, ville, code_postal, email, mobile, motif_refus, signature FROM participant, inscrit_session WHERE id = id_participant AND id_session = @session_id AND validation = 1";
             DynamicParameters parameters = new DynamicParameters();
@@ -33,7 +33,7 @@ namespace PPE___Gestion_de_formations
             return les_inscrits;
         }
 
-        public List<Participant> getPostulants(Session la_session)
+        public List<Participant> getPostulants(Session la_session) // Obtient et retourne tous les candidats en attente ou refusés à la session
         {
             string StrQuery = "SELECT id, nom, prenom, adresse, ville, code_postal, email, mobile, motif_refus, signature FROM participant, inscrit_session WHERE id = id_participant AND id_session = @session_id AND (validation = 0 OR validation = 2)";
             DynamicParameters parameters = new DynamicParameters();
@@ -43,7 +43,7 @@ namespace PPE___Gestion_de_formations
             return les_postulants;
         }
 
-        public List<Participant> getInteresses(Formation la_formation)
+        public List<Participant> getInteresses(Formation la_formation) // Obtient et retourne tous les intéressés à la formation
         {
             string StrQuery = "SELECT id, nom, prenom FROM participant, interet_formation WHERE participant.id = interet_formation.id_participant AND id_formation = @idformation";
             DynamicParameters parameters = new DynamicParameters();
@@ -51,7 +51,7 @@ namespace PPE___Gestion_de_formations
             return DB.Query<Participant>(StrQuery, parameters).ToList();
         }
 
-        public void insertParticipant(Participant le_participant, List<Formation> les_formations)
+        public void insertParticipant(Participant le_participant, List<Formation> les_formations) // Ajoute un nouveau participant avec ses intérêts de formation
         {
             // On insère le participant en base
             string StrQuery = "INSERT INTO participant VALUES(null, @nom, @prenom, @adresse, @ville, @codepostal, @email, @mobile)";
@@ -88,7 +88,7 @@ namespace PPE___Gestion_de_formations
 
         }
 
-        public void insertPostulant(Participant leParticipant, List<Session> lesSessions)
+        public void insertPostulant(Participant leParticipant, List<Session> lesSessions) // Ajoute un nouveau candidat à une session
         {
             foreach (Session la_session in lesSessions)
             {
@@ -103,7 +103,7 @@ namespace PPE___Gestion_de_formations
             
         }
 
-        public void inscrire(Participant leParticipant, Session laSession)
+        public void inscrire(Participant leParticipant, Session laSession) // Inscrit et valide un candidat à une session
         {
             string StrQuery = "UPDATE inscrit_session SET validation = 1, motif_refus = null WHERE id_participant = @idparticipant AND id_session = @idsession";
             DynamicParameters parameters = new DynamicParameters();
@@ -114,7 +114,7 @@ namespace PPE___Gestion_de_formations
             DB.Close();
         }
 
-        public void desinscrire(Participant leParticipant, Session laSession)
+        public void desinscrire(Participant leParticipant, Session laSession) // Desinscrit un candidat à une session
         {
             string StrQuery = "UPDATE inscrit_session SET validation = 0 WHERE id_participant = @idparticipant AND id_session = @idsession";
             DynamicParameters parameters = new DynamicParameters();
@@ -125,7 +125,7 @@ namespace PPE___Gestion_de_formations
             DB.Close();
         }
 
-        public void refuser(Participant leParticipant, Session laSession, string leMotifRefus)
+        public void refuser(Participant leParticipant, Session laSession, string leMotifRefus) // Refuse un candodat à une session en précisant un motif
         {
             string StrQuery = "UPDATE inscrit_session SET validation = 2, motif_refus = @motifrefus WHERE id_participant = @idparticipant AND id_session = @idsession";
             DynamicParameters parameters = new DynamicParameters();
@@ -137,7 +137,7 @@ namespace PPE___Gestion_de_formations
             DB.Close();
         }
 
-        public void signer(List<Participant> lesInscrits, Session laSession)
+        public void signer(List<Participant> lesInscrits, Session laSession) // Valide la présence ou non des inscrits à la session
         {
            foreach(Participant le_participant in lesInscrits)
             {

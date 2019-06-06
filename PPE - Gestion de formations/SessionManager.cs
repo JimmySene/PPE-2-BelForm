@@ -18,7 +18,7 @@ namespace PPE___Gestion_de_formations
             DB = new MySqlConnection(StrConnection);
         }
 
-        public void Save(Session laSession)
+        public void Save(Session laSession) //Enregistre une nouvelle session
         {
             string StrQuery = "INSERT INTO session(date_debut, date_fin, id_lieu, id_formation) VALUES(@date_debut, @date_fin, @id_lieu, @id_formation)";
             var parameters = new DynamicParameters();
@@ -31,7 +31,7 @@ namespace PPE___Gestion_de_formations
             DB.Close();
         }
 
-        public void Delete(Session laSession)
+        public void Delete(Session laSession) // Supprime la session en indiquant un motif
         {
             string StrQuery = "UPDATE session SET msg_annulation = @msg_annulation WHERE id = @id_session";
             var parameters = new DynamicParameters();
